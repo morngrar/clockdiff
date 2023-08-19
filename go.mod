@@ -7,11 +7,13 @@ require (
 	github.com/rwxrob/conf v0.8.2
 	github.com/rwxrob/help v0.7.2
 	github.com/rwxrob/vars v0.6.4
+	github.com/stretchr/testify v1.8.4
 )
 
 require (
 	github.com/a8m/envsubst v1.4.2 // indirect
 	github.com/alecthomas/participle/v2 v2.0.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dimchansky/utfbom v1.1.1 // indirect
 	github.com/elliotchance/orderedmap v1.5.0 // indirect
 	github.com/fatih/color v1.15.0 // indirect
@@ -23,6 +25,7 @@ require (
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/mikefarah/yq/v4 v4.35.1 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.9 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rogpeppe/go-internal v1.11.0 // indirect
 	github.com/rwxrob/compcmd v0.3.0 // indirect
 	github.com/rwxrob/compfile v0.1.12 // indirect
