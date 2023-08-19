@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // Package example provides the Bonzai command branch of the same name.
-package example
+package clockdiff
 
 import (
 	"fmt"
@@ -52,10 +52,10 @@ var Cmd = &Z.Cmd{
 
 // private leaf
 var sub = &Z.Cmd{
-	Name:     `subtract`,
-    Aliases: []string{"s"},
+	Name:    `subtract`,
+	Aliases: []string{"s"},
 	Summary: `subtracts two times and prints the number of hours between them`,
-    Description: `
+	Description: `
         The {{aka}} command takes two arguments, the first of which is 
         START_TIME and the second is END_TIME. The command prints the
         real-valued difference in hours between them.
@@ -69,7 +69,6 @@ var sub = &Z.Cmd{
             8
         `,
 
-
 	Commands: []*Z.Cmd{help.Cmd},
 	Call: func(x *Z.Cmd, args ...string) error {
 		if len(args) < 2 || len(args) > 2 {
@@ -77,8 +76,8 @@ var sub = &Z.Cmd{
 		}
 		// TODO: validate arguments
 
-        fmt.Printf("testing test %s", "asldkj")
-        
+		fmt.Printf("testing test %s", "asldkj")
+
 		return nil
 	},
 }
