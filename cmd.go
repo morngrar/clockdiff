@@ -24,7 +24,7 @@ var Cmd = &Z.Cmd{
 
 	Name:      `timediff`,
 	Summary:   `a tool for aiding in time reporting`,
-	Version:   `v0.2.2`,
+	Version:   `v0.2.3`,
 	Copyright: `Copyright 2023 Svein-Kåre Bjørnsen`,
 	License:   `Apache-2.0`,
 	Source:    `git@github.com:morngrar/timediff.git`,
@@ -53,6 +53,7 @@ var Cmd = &Z.Cmd{
 
 var Sub = &Z.Cmd{
 	Name:    `subtract`,
+	Usage:   `START_TIME END_TIME`,
 	Aliases: []string{"s"},
 	Summary: `subtracts two times and prints the number of hours between them`,
 	Description: `
