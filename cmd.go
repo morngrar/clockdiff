@@ -1,8 +1,8 @@
-// Copyright 2022 clockdiff Authors
+// Copyright 2022 timediff Authors
 // SPDX-License-Identifier: Apache-2.0
 
-// Package example provides the Bonzai command branch of the same name.
-package clockdiff
+// Package timediff provides the Bonzai command branch of the same name.
+package timediff
 
 import (
 	"fmt"
@@ -22,13 +22,13 @@ func init() {
 // trees or used as a standalone with light wrapper (see cmd/).
 var Cmd = &Z.Cmd{
 
-	Name:      `clockdiff`,
+	Name:      `timediff`,
 	Summary:   `a tool for aiding in time reporting`,
-	Version:   `v0.0.1`,
+	Version:   `v0.2.0`,
 	Copyright: `Copyright 2023 Svein-Kåre Bjørnsen`,
 	License:   `Apache-2.0`,
-	Source:    `git@github.com:morngrar/clockdiff.git`,
-	Issues:    `github.com/morngrar/clockdiff/issues`,
+	Source:    `git@github.com:morngrar/timediff.git`,
+	Issues:    `github.com/morngrar/timediff/issues`,
 
 	Commands: []*Z.Cmd{
 

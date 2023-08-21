@@ -1,4 +1,4 @@
-module github.com/morngrar/clockdiff
+module github.com/morngrar/timediff
 
 go 1.18
 

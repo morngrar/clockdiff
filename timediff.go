@@ -1,4 +1,4 @@
-package clockdiff
+package timediff
 
 import (
 	"fmt"

@@ -1,6 +1,6 @@
-# 🌳 clockdiff - a tool for calculating clock time differences
+# 🌳 timediff - a tool for calculating clock time differences
 
-[![GoDoc](https://godoc.org/github.com/morngrar/clockdiff?status.svg)](https://godoc.org/github.com/morngrar/clockdiff)
+[![GoDoc](https://godoc.org/github.com/morngrar/timediff?status.svg)](https://godoc.org/github.com/morngrar/timediff)
 [![License](https://img.shields.io/badge/license-Apache2-brightgreen.svg)](LICENSE)
 
 ## Install
@@ -11,7 +11,7 @@ Bonzai command tree.
 Standalone
 
 ```
-go install github.com/morngrar/clockdiff/cmd/clockdiff@latest
+go install github.com/morngrar/timediff/cmd/timediff@latest
 ```
 
 Composed
@@ -21,12 +21,12 @@ package z
 
 import (
 	Z "github.com/rwxrob/bonzai/z"
-	clockdiff "github.com/morngrar/clockdiff"
+	timediff "github.com/morngrar/timediff"
 )
 
 var Cmd = &Z.Cmd{
 	Name:     `z`,
-	Commands: []*Z.Cmd{help.Cmd, clockdiff.Cmd},
+	Commands: []*Z.Cmd{help.Cmd, timediff.Cmd},
 }
 ```
 
@@ -37,7 +37,7 @@ To activate bash completion just use the `complete -C` option from your
 completion is done by the program itself.
 
 ```
-complete -C clockdiff clockdiff
+complete -C timediff timediff
 ```
 
 If you don't have bash or tab completion check use the shortcut
