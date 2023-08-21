@@ -36,7 +36,7 @@ var Cmd = &Z.Cmd{
 		help.Cmd, conf.Cmd, vars.Cmd,
 
 		// local commands (in this module)
-		sub,
+		Sub,
 	},
 
 	// WARNING: The Description will be dedented using the exact
@@ -46,12 +46,12 @@ var Cmd = &Z.Cmd{
 	// line has the same indentation exactly.
 
 	Description: `
-		Thing
+        {{aka}} is a toolchain for simple calculation of clock time differences.
+        see the help of each subcommand separately for usage info.
 		`,
 }
 
-// private leaf
-var sub = &Z.Cmd{
+var Sub = &Z.Cmd{
 	Name:    `subtract`,
 	Aliases: []string{"s"},
 	Summary: `subtracts two times and prints the number of hours between them`,
@@ -67,6 +67,9 @@ var sub = &Z.Cmd{
             8:00
             8.00
             8
+
+        NOTE: If START_TIME is *higher* than END_TIME, it is assumed that it
+        occurred during the previous day. The output will never be negative.
         `,
 
 	Commands: []*Z.Cmd{help.Cmd},
@@ -74,9 +77,28 @@ var sub = &Z.Cmd{
 		if len(args) < 2 || len(args) > 2 {
 			return x.UsageError()
 		}
-		// TODO: validate arguments
 
-		fmt.Printf("testing test %s", "asldkj")
+		var err error
+
+		startTime := args[0]
+		endTime := args[1]
+
+		startTimeHours, err := ParseTime(startTime)
+		if err != nil {
+			return fmt.Errorf("Error parsing START_TIME: '%w'", err)
+		}
+		endTimeHours, err := ParseTime(endTime)
+		if err != nil {
+			return fmt.Errorf("Error parsing END_TIME: '%w'", err)
+		}
+
+		diff := endTimeHours - startTimeHours
+		if diff < 0 {
+			firstDay := 24 - startTimeHours
+			diff = firstDay + endTimeHours
+		}
+
+		fmt.Printf("%.2f hours\n", diff)
 
 		return nil
 	},
