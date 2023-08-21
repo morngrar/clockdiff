@@ -56,21 +56,22 @@ var Sub = &Z.Cmd{
 	Aliases: []string{"s"},
 	Summary: `subtracts two times and prints the number of hours between them`,
 	Description: `
-        The {{aka}} command takes two arguments, the first of which is 
-        START_TIME and the second is END_TIME. The command prints the
-        real-valued difference in hours between them.
+		The {{aka}} command takes two arguments, the first of which is
+		START_TIME and the second is END_TIME. The command prints the
+		real-valued difference in hours between them.
 
-        The format of the times is expected to be in 24-hour format, where the
-        time 8 AM can be written in the following ways:
+		The format of the times is expected to be in 24-hour format, where the
+		time 8 AM can be written in the following ways:
 
-            08:00
-            8:00
-            8.00
-            8
+			08:00 
+			8:00 
+			8.00 
+			8
 
-        NOTE: If START_TIME is *higher* than END_TIME, it is assumed that it
-        occurred during the previous day. The output will never be negative.
-        `,
+		*NOTE*: If START_TIME is **higher** than END_TIME the command assumes
+		that the START_TIME was during the previous day. Thus the difference
+		will never be negative.  
+	`,
 
 	Commands: []*Z.Cmd{help.Cmd},
 	Call: func(x *Z.Cmd, args ...string) error {
