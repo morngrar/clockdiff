@@ -24,7 +24,7 @@ var Cmd = &Z.Cmd{
 
 	Name:      `timediff`,
 	Summary:   `a tool for aiding in time reporting`,
-	Version:   `v0.2.1`,
+	Version:   `v0.2.2`,
 	Copyright: `Copyright 2023 Svein-Kåre Bjørnsen`,
 	License:   `Apache-2.0`,
 	Source:    `git@github.com:morngrar/timediff.git`,
@@ -63,10 +63,10 @@ var Sub = &Z.Cmd{
 		The format of the times is expected to be in 24-hour format, where the
 		time 8 AM can be written in the following ways:
 
-			08:00 
-			8:00 
-			8.00 
-			8
+		    08:00 
+		    8:00 
+		    8.00 
+		    8
 
 		*NOTE*: If START_TIME is **higher** than END_TIME the command assumes
 		that the START_TIME was during the previous day. Thus the difference
