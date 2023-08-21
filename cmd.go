@@ -24,7 +24,7 @@ var Cmd = &Z.Cmd{
 
 	Name:      `timediff`,
 	Summary:   `a tool for aiding in time reporting`,
-	Version:   `v0.2.0`,
+	Version:   `v0.2.1`,
 	Copyright: `Copyright 2023 Svein-Kåre Bjørnsen`,
 	License:   `Apache-2.0`,
 	Source:    `git@github.com:morngrar/timediff.git`,
