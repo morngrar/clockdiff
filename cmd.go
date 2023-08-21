@@ -24,7 +24,7 @@ var Cmd = &Z.Cmd{
 
 	Name:      `timediff`,
 	Summary:   `a tool for aiding in time reporting`,
-	Version:   `v0.2.3`,
+	Version:   `v0.2.4`,
 	Copyright: `Copyright 2023 Svein-Kåre Bjørnsen`,
 	License:   `Apache-2.0`,
 	Source:    `git@github.com:morngrar/timediff.git`,
@@ -53,11 +53,15 @@ var Cmd = &Z.Cmd{
 
 var Sub = &Z.Cmd{
 	Name:    `subtract`,
-	Usage:   `START_TIME END_TIME`,
+	Usage:   `[START_TIME END_TIME | COMMAND]`,
 	Aliases: []string{"s"},
 	Summary: `subtracts two times and prints the number of hours between them`,
 	Description: `
-		The {{aka}} command takes two arguments, the first of which is
+		The {{aka}} command either takes a subcommand or two arguments and
+		executes its primary function. The only subcommand that is currently
+		supported is this help.
+
+		In regards to the primary function, the the first of the arguments is
 		START_TIME and the second is END_TIME. The command prints the
 		real-valued difference in hours between them.
 
