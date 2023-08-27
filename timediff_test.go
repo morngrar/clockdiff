@@ -1,3 +1,6 @@
+// Copyright 2022 timediff Authors
+// SPDX-License-Identifier: Apache-2.0
+
 package timediff
 
 import (
