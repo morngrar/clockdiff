@@ -5,6 +5,14 @@
 
 ## Install
 
+### Prebuilt executable
+
+Download the latest release for your platform from the [releases page](https://github.com/morngrar/timediff/releases), put it somewhere in your PATH. If you're running bash as your shell, you can also enable command tab completion by following the instruction in the [tab completion section](#tab-completion).
+
+Every release is signed with gpg, the public key of which can be found [here](https://keyserver.ubuntu.com/pks/lookup?search=49564b7270e13347a20deee9327bdc9bf2b00d67&fingerprint=on&op=index).
+
+### Bonzai style.
+
 This command can be installed as a standalone program or composed into a
 Bonzai command tree.
 
