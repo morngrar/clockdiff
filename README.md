@@ -3,6 +3,65 @@
 [![GoDoc](https://godoc.org/github.com/morngrar/timediff?status.svg)](https://godoc.org/github.com/morngrar/timediff)
 [![License](https://img.shields.io/badge/license-Apache2-brightgreen.svg)](LICENSE)
 
+## Usage
+
+```
+$ timediff
+NAME
+       timediff - a tool for aiding in time reporting
+
+SYNOPSIS
+       timediff COMMAND
+
+COMMANDS
+       help       - display help similar to man page format
+       conf       - manage conf in /home/sk/.config/timediff/config.yaml
+       var        - cache variables in /home/sk/.cache/timediff/vars
+       s|subtract - subtracts two times and prints the number of hours between them
+
+DESCRIPTION
+       timediff is a toolchain for simple calculation of clock time differences. see the help of each
+       subcommand separately for usage info.
+
+CONTACT
+       Source: git@github.com:morngrar/timediff.git
+       Issues: github.com/morngrar/timediff/issues
+
+LEGAL
+       timediff (v0.2.2) Copyright 2023 Svein-Kåre Bjørnsen
+       License Apache-2.0
+```
+
+```
+$ timediff s help
+NAME
+       subtract - subtracts two times and prints the number of hours between them
+
+ALIASES
+       subtract (s)
+
+SYNOPSIS
+       subtract [COMMAND]
+
+COMMANDS
+       help - display help similar to man page format
+
+DESCRIPTION
+       The subtract (s) command takes two arguments, the first of which is START_TIME and the second is
+       END_TIME. The command prints the real-valued difference in hours between them.
+
+       The format of the times is expected to be in 24-hour format, where the time 8 AM can be written in
+       the following ways:
+
+           08:00 
+           8:00 
+           8.00 
+           8
+
+       NOTE: If START_TIME is higher than END_TIME the command assumes that the START_TIME was
+       during the previous day. Thus the difference will never be negative.
+```
+
 ## Install
 
 ### Prebuilt executable
